@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<nav md-tab-nav-bar>
+	<div class="container2">
+		<a md-tab-link *ngFor="let navItem of navItems"
+			[routerLink]="[navItem.route]" routerLinkActive
+			#rla="routerLinkActive" [active]="rla.isActive"> {{navItem.name}}
+		</a> <a md-tab-link target="_blank"
+			href="https://github.com/scandex/AskMrOtaku">Source</a>
+	</div>
+</nav>
+<router-outlet></router-outlet>
+
+
+
+

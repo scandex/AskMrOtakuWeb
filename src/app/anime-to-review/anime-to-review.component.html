@@ -1,0 +1,24 @@
+<div class="container">
+	<md-grid-list cols="5" rowHeight="320" [gutterSize]="20">
+	<md-grid-tile *ngFor="let anime of animes;"> <img
+		src={{anime.image}}> <md-grid-tile-header>
+	{{anime.name}} <br>
+	<a target="_blank"
+		href="https://myanimelist.net/anime/{{anime.animeId}}"><md-icon
+			style="color:white;text-align:center;">visibility</md-icon></a> </md-grid-tile-header> <md-grid-tile-footer>
+	<md-button-toggle-group> <md-button-toggle
+		style="line-height: 50px;" value="1"
+		(click)="setPreference(anime.animeId,1)"> <md-icon
+		style="font-size:30px;height:30px;width:15px;color:white;">sentiment_very_dissatisfied</md-icon>
+	</md-button-toggle> <md-button-toggle style="line-height: 50px;" value="5"
+		(click)="setPreference(anime.animeId,5)"> <md-icon
+		style="font-size:30px;height:30px;width:15px;color:white;">sentiment_neutral</md-icon>
+	</md-button-toggle> <md-button-toggle style="line-height: 50px;" value="9"
+		(click)="setPreference(anime.animeId,9)"> <md-icon
+		style="font-size:30px; height:30px;width:15px;color:white;">sentiment_very_satisfied</md-icon>
+	</md-button-toggle> </md-button-toggle-group> </md-grid-tile-footer> </md-grid-tile> </md-grid-list>
+</div>
+
+
+
+
